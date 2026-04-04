@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: training-journal
+Version: 1.0.0
+Summary: Программа для учёта тренировок
+Home-page: https://github.com/...
+Author: ...
+Author-email: ...
+License: Apache-2.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: summary
