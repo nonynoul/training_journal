@@ -1,8 +1,25 @@
+"""
+Модуль с классами упражнений
+Содержит классы Exercise и CardioExercise
+"""
+
+def input_number(text):
+    """
+    Безопасный ввод целого числа
+    :param text: Текст запроса
+    :return: Введённое число
+    """
+    while True:
+        value = input(text).strip()
+        try:
+            return int(value)
+        except ValueError:
+            print('Нужно ввести целое число')
+
 class Exercise:
     """
     Класс обычного упражнения
     """
-
     def __init__(self, name, exercise_type, duration):
         """
         Конструктор упражнения
@@ -21,14 +38,14 @@ class Exercise:
         """
         return f'{self.name} | тип: {self.exercise_type} | {self.duration} мин'
 
-    def create_regular_exercise():
-        """
-        Создаёт обычное упражнение через ввод пользователя
-        """
-        name = input('Введите название упражнения: ').strip()
-        exercise_type = input('Введите тип упражнения: ').strip()
-        duration = input_number('Введите длительность в минутах: ')
-        return Exercise(name, exercise_type, duration)
+def create_regular_exercise():
+    """
+    Создаёт обычное упражнение через ввод пользователя
+    """
+    name = input('Введите название упражнения: ').strip()
+    exercise_type = input('Введите тип упражнения: ').strip()
+    duration = input_number('Введите длительность в минутах: ')
+    return Exercise(name, exercise_type, duration)
 
 class CardioExercise(Exercise):
     """
@@ -52,11 +69,15 @@ class CardioExercise(Exercise):
         """
         return f'{self.name} | кардио | {self.duration} мин | интенсивность: {self.intensity}'
 
-    def create_cardio_exercise():
-        """
-        Создаёт кардио-упражнение через ввод пользователя
-        """
-        name = input('Введите название кардио: ').strip()
-        duration = input_number('Введите длительность в минутах: ')
-        intensity = input('Введите интенсивность: ').strip()
-        return CardioExercise(name, duration, intensity)
+def create_cardio_exercise():
+    """
+    Создаёт кардио-упражнение через ввод пользователя
+    """
+    name = input('Введите название кардио: ').strip()
+    duration = input_number('Введите длительность в минутах: ')
+    intensity = input('Введите интенсивность: ').strip()
+    return CardioExercise(name, duration, intensity)
+
+if __name__ == '__main__':
+    print('Модуль exercise.py содержит классы Exercise и CardioExercise')
+    
