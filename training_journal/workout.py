@@ -82,4 +82,4 @@ def create_workout():
     return workout
 
 if __name__ == '__main__':
-    print('Модуль workout.py содержит класс Workout')
+    ...
