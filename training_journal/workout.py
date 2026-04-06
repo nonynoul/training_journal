@@ -1,8 +1,26 @@
+"""
+Модуль с классом Workout для хранения тренировки
+"""
+
+from .exercise import create_regular_exercise, create_cardio_exercise
+
+def input_number(text):
+    """
+    Безопасный ввод целого числа
+    :param text: Текст запроса
+    :return: Введённое число
+    """
+    while True:
+        value = input(text).strip()
+        try:
+            return int(value)
+        except ValueError:
+            print('Нужно ввести целое число')
+
 class Workout:
     """
     Класс тренировки
     """
-
     def __init__(self, date):
         """
         Конструктор тренировки
@@ -35,38 +53,33 @@ class Workout:
         """
         return f'{self.date}: {len(self.exercises)} упражнений, всего {self.total_duration()} мин'
 
-        def create_workout():
-        """
-        Создаёт тренировку через ввод пользователя
-        """
-        date = input('Введите дату тренировки (YYYY-MM-DD): ').strip()
-        workout = Workout(date)
+def create_workout():
+    """
+    Создаёт тренировку через ввод пользователя
+    """
+    date = input('Введите дату тренировки (YYYY-MM-DD): ').strip()
+    workout = Workout(date)
     
-        while True:
-            print('\n1 - добавить обычное упражнение')
-            print('2 - добавить кардио')
-            print('0 - закончить тренировку')
+    while True:
+        print('\n1 - добавить обычное упражнение')
+        print('2 - добавить кардио')
+        print('0 - закончить тренировку')
     
-            choice = input('Ваш выбор: ').strip()
+        choice = input('Ваш выбор: ').strip()
     
-            if choice == '1':
-                ex = create_regular_exercise()
-                workout.add_exercise(ex)
-                print('Упражнение добавлено')
-            elif choice == '2':
-                ex = create_cardio_exercise()
-                workout.add_exercise(ex)
-                print('Кардио добавлено')
-            elif choice == '0':
-                break
-            else:
-                print('Нет такого пункта')
-        return workout
+        if choice == '1':
+            ex = create_regular_exercise()
+            workout.add_exercise(ex)
+            print('Упражнение добавлено')
+        elif choice == '2':
+            ex = create_cardio_exercise()
+            workout.add_exercise(ex)
+            print('Кардио добавлено')
+        elif choice == '0':
+            break
+        else:
+            print('Нет такого пункта')
+    return workout
 
-def short_workout_info(workout):
-    """
-    Краткая информация о тренировке
-    :param workout: Объект Workout
-    :return: Строка с датой и количеством упражнений
-    """
-    return f'{workout.date}: {len(workout.exercises)} упражнений, {workout.total_duration()} мин'
+if __name__ == '__main__':
+    print('Модуль workout.py содержит класс Workout')
