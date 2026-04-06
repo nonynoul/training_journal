@@ -1,2 +1,0 @@
-bin
-training_journal
