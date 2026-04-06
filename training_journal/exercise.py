@@ -43,3 +43,7 @@ class CardioExercise(Exercise):
         :return: Полное название упражнения
         """
         return f'{self.name} | кардио | {self.duration} мин | интенсивность: {self.intensity}'
+
+if __name__ == '__main__':
+    main()
+    
