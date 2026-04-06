@@ -20,6 +20,29 @@ def input_number(text):
         except ValueError:
             print('Нужно ввести целое число')
 
+def show_all_workouts(log):
+    """
+    Показывает все тренировки из журнала
+    :param log: Объект WorkoutLog
+    """
+    if len(log.workouts) == 0:
+        print('Тренировок пока нет')
+        return
+    
+    print()
+    for i, workout in enumerate(log.workouts, 1):
+        print(f'{i}. {short_workout_info(workout)}')
+        for ex in workout.exercises:
+            print(f'   {ex}')
+
+def short_workout_info(workout):
+    """
+    Краткая информация о тренировке
+    :param workout: Объект Workout
+    :return: Строка с датой и количеством упражнений
+    """
+    return f'{workout.date}: {len(workout.exercises)} упражнений, {workout.total_duration()} мин'
+
 if __name__ == '__main__':
     log = WorkoutLog()
 
