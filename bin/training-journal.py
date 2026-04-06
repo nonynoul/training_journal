@@ -68,6 +68,3 @@ if __name__ == '__main__':
             break
         else:
             print('Нет такого пункта')
-
-if __name__ == '__main__':
-    main()
