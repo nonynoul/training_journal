@@ -1,8 +1,11 @@
+"""
+Модуль с классом WorkoutLog для журнала тренировок.
+"""
+
 class WorkoutLog:
     """
     Журнал тренировок
     """
-
     def __init__(self):
         """
         Конструктор журнала
@@ -82,16 +85,5 @@ class WorkoutLog:
 
         return ' \n'.join(lines)
 
-    def show_all_workouts(log):
-    """
-    Показывает все тренировки из журнала
-    """
-    if len(log.workouts) == 0:
-        print('Тренировок пока нет')
-        return
-
-    print()
-    for i, workout in enumerate(log.workouts, 1):
-        print(f'{i}. {short_workout_info(workout)}')
-        for ex in workout.exercises:
-            print(f'{ex}')
+if __name__ == '__main__':
+    print('Модуль log.py содержит класс WorkoutLog')
