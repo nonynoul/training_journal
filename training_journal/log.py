@@ -81,3 +81,7 @@ class WorkoutLog:
                 lines.append(f' - {ex_type}: {duration} мин')
 
         return ' \n'.join(lines)
+
+if __name__ == '__main__':
+    main()
+    
