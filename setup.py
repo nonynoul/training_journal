@@ -1,15 +1,15 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='training-journal', # Название вашей программы
-    version='1.0.0', # Версия вашей программы.
+    name='training-journal',
+    version='1.0.0',
     packages=find_packages(),
-    scripts=["bin/training-journal.py"], # Расположение главного исполняемого файла.
-    url='https://github.com/nonynoul/coursach', # Адрес репозитория с вашей курсовой работой.
+    scripts=["bin/training-journal.py"],
+    url='https://github.com/nonynoul/training_journal',
     license='Apache-2.0',
-    author='...', # ФИО автора.
-    author_email='...', # Электронная почта автора.
-    description='Программа для учёта тренировок', # Описание вашей поделки. Что она может, для чего сделана.
+    author='Tsiplakov Igor',
+    author_email='factinname@gmail.com',
+    description='Программа для учёта тренировок',
     include_package_data=True,
     install_requires=[
       # Список зависимостей если есть.
