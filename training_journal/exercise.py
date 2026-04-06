@@ -79,5 +79,5 @@ def create_cardio_exercise():
     return CardioExercise(name, duration, intensity)
 
 if __name__ == '__main__':
-    print('Модуль exercise.py содержит классы Exercise и CardioExercise')
+    ...
     
