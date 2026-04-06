@@ -86,4 +86,4 @@ class WorkoutLog:
         return ' \n'.join(lines)
 
 if __name__ == '__main__':
-    print('Модуль log.py содержит класс WorkoutLog')
+    ...
