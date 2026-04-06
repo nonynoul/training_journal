@@ -1,10 +1,29 @@
 #!/usr/bin/env python3
+"""
+Главный скрипт запуска программы учёта тренировок.
+"""
 
-from .exercise import Exercise, CardioExercise
-from .log import WorkoutLog
-from .workout import Workout, short_workout_info
+from training_journal.workout import Workout
+from training_journal.log import WorkoutLog
 
-if __name__ == '__main__':
+
+def input_number(text):
+    '''
+    Безопасный ввод целого числа.
+    
+    :param text: Текст запроса
+    :return: Введённое число
+    '''
+    while True:
+        value = input(text).strip()
+        try:
+            return int(value)
+        except ValueError:
+            print('Нужно ввести целое число')
+
+
+def main():
+    '''Главная функция программы.'''
     log = WorkoutLog()
 
     while True:
@@ -17,11 +36,11 @@ if __name__ == '__main__':
         choice = input('Ваш выбор: ').strip()
 
         if choice == '1':
-            workout = create_workout()
+            workout = Workout.create_workout()
             log.add_workout(workout)
             print('Тренировка сохранена в журнале')
         elif choice == '2':
-            show_all_workouts(log)
+            log.show_all_workouts()
         elif choice == '3':
             print(log.statistics_text())
         elif choice == '0':
@@ -29,3 +48,6 @@ if __name__ == '__main__':
             break
         else:
             print('Нет такого пункта')
+
+if __name__ == '__main__':
+    main()
