@@ -103,6 +103,3 @@ def main():
             break
         else:
             print('Нет такого пункта')
-
-if __name__ == '__main__':
-    main()
