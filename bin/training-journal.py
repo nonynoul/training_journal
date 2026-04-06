@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
+
 """
-Главный скрипт запуска программы учёта тренировок.
+Главный скрипт запуска программы учёта тренировок
 """
 
 from training_journal.workout import Workout
 from training_journal.log import WorkoutLog
 
-
 def input_number(text):
-    '''
-    Безопасный ввод целого числа.
-    
+    """
+    Безопасный ввод целого числа
     :param text: Текст запроса
     :return: Введённое число
-    '''
+    """
     while True:
         value = input(text).strip()
         try:
@@ -21,9 +20,7 @@ def input_number(text):
         except ValueError:
             print('Нужно ввести целое число')
 
-
-def main():
-    '''Главная функция программы.'''
+if __name__ == '__main__':
     log = WorkoutLog()
 
     while True:
@@ -36,11 +33,11 @@ def main():
         choice = input('Ваш выбор: ').strip()
 
         if choice == '1':
-            workout = Workout.create_workout()
+            workout = create_workout()
             log.add_workout(workout)
             print('Тренировка сохранена в журнале')
         elif choice == '2':
-            log.show_all_workouts()
+            show_all_workouts(log)
         elif choice == '3':
             print(log.statistics_text())
         elif choice == '0':
