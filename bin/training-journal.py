@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
-"""
-Главный скрипт запуска программы учёта тренировок
-"""
+# Главный скрипт запуска программы учёта тренировок
 
 from training_journal.workout import Workout
 from training_journal.log import WorkoutLog
