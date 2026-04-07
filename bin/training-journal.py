@@ -35,14 +35,6 @@ def show_all_workouts(log):
         for ex in workout.exercises:
             print(f'   {ex}')
 
-def short_workout_info(workout):
-    """
-    Краткая информация о тренировке
-    :param workout: Объект Workout
-    :return: Строка с датой и количеством упражнений
-    """
-    return f'{workout.date}: {len(workout.exercises)} упражнений, {workout.total_duration()} мин'
-
 if __name__ == '__main__':
     log = WorkoutLog()
 
