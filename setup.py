@@ -5,7 +5,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='training-journal',
+    name='training_journal',
     version='1.0.0',
     packages=find_packages(),
     scripts=["bin/training-journal.py"],
