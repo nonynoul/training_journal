@@ -53,6 +53,7 @@ class Workout:
         """
         return f'{self.date}: {len(self.exercises)} упражнений, всего {self.total_duration()} мин'
 
+@staticmethod
 def create_workout():
     """
     Создаёт тренировку через ввод пользователя
