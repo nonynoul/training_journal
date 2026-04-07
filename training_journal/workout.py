@@ -1,6 +1,4 @@
-"""
-Модуль с классом Workout для хранения тренировки
-"""
+# Модуль с классом Workout для хранения тренировки
 
 from .exercise import create_regular_exercise, create_cardio_exercise
 
