@@ -56,7 +56,7 @@ if __name__ == '__main__':
 
         choice = input('Ваш выбор: ').strip()
         if choice == '1':
-            workout = create_workout()
+            workout = Workout.create_workout()
             log.add_workout(workout)
             print('Тренировка сохранена в журнале')
         elif choice == '2':
