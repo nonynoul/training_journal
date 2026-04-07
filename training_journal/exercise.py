@@ -38,6 +38,7 @@ class Exercise:
         """
         return f'{self.name} | тип: {self.exercise_type} | {self.duration} мин'
 
+@staticmethod
 def create_regular_exercise():
     """
     Создаёт обычное упражнение через ввод пользователя
@@ -69,6 +70,7 @@ class CardioExercise(Exercise):
         """
         return f'{self.name} | кардио | {self.duration} мин | интенсивность: {self.intensity}'
 
+@staticmethod
 def create_cardio_exercise():
     """
     Создаёт кардио-упражнение через ввод пользователя
