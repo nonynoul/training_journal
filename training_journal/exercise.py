@@ -17,17 +17,17 @@ class Exercise:
         self.duration = duration
 
     def input_number(text):
-    """
-    Безопасный ввод целого числа
-    :param text: Текст запроса
-    :return: Введённое число
-    """
-    while True:
-        value = input(text).strip()
-        try:
-            return int(value)
-        except ValueError:
-            print('Нужно ввести целое число')
+        """
+        Безопасный ввод целого числа
+        :param text: Текст запроса
+        :return: Введённое число
+        """
+        while True:
+            value = input(text).strip()
+            try:
+                return int(value)
+            except ValueError:
+                print('Нужно ввести целое число')
 
     def __str__(self):
         """
