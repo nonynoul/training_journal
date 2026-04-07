@@ -53,34 +53,34 @@ class Workout:
         """
         return f'{self.date}: {len(self.exercises)} упражнений, всего {self.total_duration()} мин'
 
-@staticmethod
-def create_workout():
-    """
-    Создаёт тренировку через ввод пользователя
-    """
-    date = input('Введите дату тренировки (YYYY-MM-DD): ').strip()
-    workout = Workout(date)
+    @staticmethod
+    def create_workout():
+        """
+        Создаёт тренировку через ввод пользователя
+        """
+        date = input('Введите дату тренировки (YYYY-MM-DD): ').strip()
+        workout = Workout(date)
     
-    while True:
-        print('\n1 - добавить обычное упражнение')
-        print('2 - добавить кардио')
-        print('0 - закончить тренировку')
+        while True:
+            print('\n1 - добавить обычное упражнение')
+            print('2 - добавить кардио')
+            print('0 - закончить тренировку')
     
-        choice = input('Ваш выбор: ').strip()
+            choice = input('Ваш выбор: ').strip()
     
-        if choice == '1':
-            ex = create_regular_exercise()
-            workout.add_exercise(ex)
-            print('Упражнение добавлено')
-        elif choice == '2':
-            ex = create_cardio_exercise()
-            workout.add_exercise(ex)
-            print('Кардио добавлено')
-        elif choice == '0':
-            break
-        else:
-            print('Нет такого пункта')
-    return workout
+            if choice == '1':
+                ex = create_regular_exercise()
+                workout.add_exercise(ex)
+                print('Упражнение добавлено')
+            elif choice == '2':
+                ex = create_cardio_exercise()
+                workout.add_exercise(ex)
+                print('Кардио добавлено')
+            elif choice == '0':
+                break
+            else:
+                print('Нет такого пункта')
+        return workout
 
 if __name__ == '__main__':
     ...
