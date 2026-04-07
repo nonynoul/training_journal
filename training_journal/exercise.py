@@ -3,19 +3,6 @@
 Содержит классы Exercise и CardioExercise
 """
 
-def input_number(text):
-    """
-    Безопасный ввод целого числа
-    :param text: Текст запроса
-    :return: Введённое число
-    """
-    while True:
-        value = input(text).strip()
-        try:
-            return int(value)
-        except ValueError:
-            print('Нужно ввести целое число')
-
 class Exercise:
     """
     Класс обычного упражнения
@@ -30,6 +17,19 @@ class Exercise:
         self.name = name
         self.exercise_type = exercise_type
         self.duration = duration
+
+    def input_number(text):
+    """
+    Безопасный ввод целого числа
+    :param text: Текст запроса
+    :return: Введённое число
+    """
+    while True:
+        value = input(text).strip()
+        try:
+            return int(value)
+        except ValueError:
+            print('Нужно ввести целое число')
 
     def __str__(self):
         """
