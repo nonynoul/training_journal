@@ -38,15 +38,15 @@ class Exercise:
         """
         return f'{self.name} | тип: {self.exercise_type} | {self.duration} мин'
 
-@staticmethod
-def create_regular_exercise():
-    """
-    Создаёт обычное упражнение через ввод пользователя
-    """
-    name = input('Введите название упражнения: ').strip()
-    exercise_type = input('Введите тип упражнения: ').strip()
-    duration = input_number('Введите длительность в минутах: ')
-    return Exercise(name, exercise_type, duration)
+    @staticmethod
+    def create_regular_exercise():
+        """
+        Создаёт обычное упражнение через ввод пользователя
+        """
+        name = input('Введите название упражнения: ').strip()
+        exercise_type = input('Введите тип упражнения: ').strip()
+        duration = input_number('Введите длительность в минутах: ')
+        return Exercise(name, exercise_type, duration)
 
 class CardioExercise(Exercise):
     """
@@ -70,15 +70,15 @@ class CardioExercise(Exercise):
         """
         return f'{self.name} | кардио | {self.duration} мин | интенсивность: {self.intensity}'
 
-@staticmethod
-def create_cardio_exercise():
-    """
-    Создаёт кардио-упражнение через ввод пользователя
-    """
-    name = input('Введите название кардио: ').strip()
-    duration = input_number('Введите длительность в минутах: ')
-    intensity = input('Введите интенсивность: ').strip()
-    return CardioExercise(name, duration, intensity)
+    @staticmethod
+    def create_cardio_exercise():
+        """
+        Создаёт кардио-упражнение через ввод пользователя
+        """
+        name = input('Введите название кардио: ').strip()
+        duration = input_number('Введите длительность в минутах: ')
+        intensity = input('Введите интенсивность: ').strip()
+        return CardioExercise(name, duration, intensity)
 
 if __name__ == '__main__':
     ...
