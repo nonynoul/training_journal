@@ -1,7 +1,5 @@
-"""
-Модуль с классами упражнений
-Содержит классы Exercise и CardioExercise
-"""
+# Модуль с классами упражнений
+# Содержит классы Exercise и CardioExercise
 
 class Exercise:
     """
