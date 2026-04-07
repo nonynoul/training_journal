@@ -1,6 +1,6 @@
 # Модуль с классом Workout для хранения тренировки
 
-from .exercise import create_regular_exercise, create_cardio_exercise
+from .exercise import Exercise, CardioExercise
 
 class Workout:
     """
@@ -67,11 +67,11 @@ class Workout:
             choice = input('Ваш выбор: ').strip()
     
             if choice == '1':
-                ex = create_regular_exercise()
+                ex = Exercise.create_regular_exercise()
                 workout.add_exercise(ex)
                 print('Упражнение добавлено')
             elif choice == '2':
-                ex = create_cardio_exercise()
+                ex = CardioExercise.create_cardio_exercise()
                 workout.add_exercise(ex)
                 print('Кардио добавлено')
             elif choice == '0':
