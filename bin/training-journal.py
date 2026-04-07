@@ -43,9 +43,10 @@ def short_workout_info(workout):
     """
     return f'{workout.date}: {len(workout.exercises)} упражнений, {workout.total_duration()} мин'
 
+
+
 if __name__ == '__main__':
     log = WorkoutLog()
-
     while True:
         print('\nУчёт тренировок')
         print('1 - добавить тренировку')
@@ -54,7 +55,6 @@ if __name__ == '__main__':
         print('0 - выход')
 
         choice = input('Ваш выбор: ').strip()
-
         if choice == '1':
             workout = create_workout()
             log.add_workout(workout)
